@@ -1,0 +1,3 @@
+# List
+1.install pip
+  $ sudo apt install python-pip
