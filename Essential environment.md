@@ -19,3 +19,12 @@
 ## 5.install docker composer
   follow the steps by:https://docs.docker.com/compose/install/<br>
   or https://docs.docker.com/compose/install/#alternative-install-options<br>
+## 6.install Hyperledger Fabric
+  via https://hub.docker.com/<br>
+  search for<br>
+  Hyperledger Fabric<br>
+  tools<br>
+  ca<br>
+  orderer<br>
+  peer<br>
+  baseos<br>
