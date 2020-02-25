@@ -1,4 +1,4 @@
-# List
+#List
 1.install pip
   $ sudo apt install python-pip
 2.change the download source of pip
