@@ -17,8 +17,12 @@
 ## 4.install docker
   follow the steps by:https://docs.docker.com/install/linux/docker-ce/ubuntu/
 ## 5.install docker composer
-  follow the steps by:https://docs.docker.com/compose/install/<br>
-  or https://docs.docker.com/compose/install/#alternative-install-options<br>
+  #follow the steps by:https://docs.docker.com/compose/install/<br>
+  #or https://docs.docker.com/compose/install/#alternative-install-options<br>
+  以上安装方法会出现安装不完整的问题<br>
+  解决方法为先通过以上方法安装，之后去github docker/compose的页面下载，复制到/usr/local/bin<br>
+  删除原docker-compose,把下载的文件改名为docker-compose，并使用chmod +x来赋予执行权限<br>
+  使用docker-compose version检验安装<br>
 ## 6.install Hyperledger Fabric(both latest and 1.0.0 are needed & baseos 0.3.1 is needed)
   via https://hub.docker.com/<br>
   search for<br>
