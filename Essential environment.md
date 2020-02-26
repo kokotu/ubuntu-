@@ -28,3 +28,17 @@
   orderer<br>
   peer<br>
   baseos<br>
+## 7.set go
+  cd /usr/local<br>
+  wget https://golang.google.cn/dl/......<br>
+  tar -xzf ...<br>
+  cd go<br>
+  bin/go version<br>
+  cd<br>
+  cd /etc<br>
+  sudo gedit profile<br>
+  add export GOROOT=/usr/local/go and export PATH=$PATH:$GOROOT/bin:$GOBIN at the end of the file<br>
+  source profile<br>
+  reboot<br>
+  use `go env` to check
+  
