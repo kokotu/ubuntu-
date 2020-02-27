@@ -23,15 +23,21 @@
   解决方法为先通过以上方法安装，之后去github docker/compose的页面下载，复制到/usr/local/bin<br>
   删除原docker-compose,把下载的文件改名为docker-compose，并使用chmod +x来赋予执行权限<br>
   使用docker-compose version检验安装<br>
-## 6.install Hyperledger Fabric(both latest and 1.0.0 are needed & baseos 0.3.1 is needed)
-  via https://hub.docker.com/<br>
-  search for<br>
-  Hyperledger Fabric<br>
-  tools<br>
-  ca<br>
-  orderer<br>
-  peer<br>
-  baseos<br>
+## 6.install Hyperledger Fabric tools
+  先按9,10步来获取源码并修改源码之后进入到fabric-samples/scripts使用`./fabric-preload.sh 1.0.0`来安装所需的一切工具
+  ### 在这之前使用阿里云镜像加速docker pull
+    配置镜像加速器
+  针对Docker客户端版本大于 1.10.0 的用户<br>
+
+  您可以通过修改daemon配置文件/etc/docker/daemon.json来使用加速器<br>
+  sudo mkdir -p /etc/docker<br>
+  sudo tee /etc/docker/daemon.json <<-'EOF'<br>
+  {<br>
+    "registry-mirrors": ["https://o481a4bg.mirror.aliyuncs.com"]<br>
+  }<br>
+EOF<br>
+sudo systemctl daemon-reload<br>
+sudo systemctl restart docker<br>
 ## 7.set go
   cd /usr/local<br>
   wget https://golang.google.cn/dl/......<br>
@@ -51,12 +57,14 @@
 ## 8.每次重启系统或Terminal后先sudo su来获取root权限，随后在去到/etc里面source profile一次，激活go（以后可尝试修改bash_profile来解决每次都要source的问题）  
 ## 9.下载fabric源码库和fabric-samples
   `cd $GOPATH/src`<br>
-  `git clone git://github.com/hyperledger/fabric-samples.git`<br>
-  `git clone git://github.com/hyperledger/fabric.git`<br>
+  `mkdir -p github.com/hyperfabric/fabric(and fabric-samples)`<br>
+  使用码云镜像仓库<br>
+  `git clone https://gitee.com/kokuto/fabric.git`<br>
+  `git clone https://gitee.com/kokuto/fabric-samples.git`<br>
 ## 10.切换源码库分支
   cd到各自目录<br>
   `git checkout release-1.0`<br>
-  安装cryptogen, configtxgen, configtxlator<br>
+  安装cryptogen, configtxgenr<br>
   在.../fabric/common/config目录和/tools目录<br>
   进入到子目录<br>
   `go install`<br>
