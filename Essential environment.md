@@ -1,6 +1,6 @@
 # List
 ## 1.install pip
-  $ sudo apt install python-pip
+  $ sudo apt install python3-pip
 ## 2.change the download source of pip
   cd home<br>
   create a new folder named '.pip(2/3)'<br>
