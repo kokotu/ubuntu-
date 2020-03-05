@@ -57,7 +57,7 @@ sudo systemctl restart docker<br>
 ## 8.每次重启系统或Terminal后先sudo su来获取root权限，随后在去到/etc里面source profile一次，激活go（以后可尝试修改bash_profile来解决每次都要source的问题）  
 ## 9.下载fabric源码库和fabric-samples
   `cd $GOPATH/src`<br>
-  `mkdir -p github.com/hyperfabric/fabric(and fabric-samples)`<br>
+  `mkdir -p github.com/hyperledger/fabric(and fabric-samples)`<br>
   使用码云镜像仓库<br>
   `git clone https://gitee.com/kokuto/fabric.git`<br>
   `git clone https://gitee.com/kokuto/fabric-samples.git`<br>
