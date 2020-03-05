@@ -68,3 +68,5 @@ sudo systemctl restart docker<br>
   在.../fabric/common/config目录和/tools目录<br>
   进入到子目录<br>
   `go install`<br>
+  若出现#include <ltdl.h>编译错误<br>
+  apt install libltdl3-dev<br>
