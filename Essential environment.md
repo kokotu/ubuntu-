@@ -66,7 +66,9 @@ sudo systemctl restart docker<br>
   `git checkout release-1.0`<br>
   安装cryptogen, configtxgenr<br>
   cd .../fabric<br>
-  make configtxgen<br>
-  make cryptogen
+  cd /common/configtx/tool/configtxgen<br>
+  go install
+  cd /common/tools/cryptogen<br>
+  go install
   若出现#include <ltdl.h>编译错误<br>
   apt install libltdl3-dev<br>
